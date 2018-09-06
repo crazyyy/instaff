@@ -2495,6 +2495,14 @@ body {
   -webkit-font-smoothing: antialiased;
 }
 
+body.home header {
+  height: 760px;
+}
+
+body.about header {
+  background-image: url(../img/header-bg-about.png);
+}
+
 h1,
 h2,
 h3,
@@ -2560,7 +2568,7 @@ button:hover {
 }
 
 header {
-  height: 760px;
+  height: 420px;
   margin-bottom: 80px;
   background-image: url(../img/header-bg-home.png);
   background-repeat: no-repeat;
@@ -3214,8 +3222,8 @@ nav ul li {
   height: 70px;
   margin-bottom: 20px;
   padding-left: 85px;
-  background-color: #d4d0c8;
   color: #000;
+  background-color: #d4d0c8;
   font-size: 21px;
   line-height: 3.1;
 }
@@ -3268,7 +3276,6 @@ nav ul li {
   padding-bottom: 140px;
   text-align: center;
   color: #000000;
-  background-image: url(../img/block-quote.jpg);
   background-repeat: no-repeat;
   background-position: center;
   background-size: cover;

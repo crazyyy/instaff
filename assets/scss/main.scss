@@ -25,6 +25,16 @@ body {
   line-height: $base-line-height;
 
   -webkit-font-smoothing: antialiased;
+  &.home {
+    header {
+      height: 760px;
+    }
+  }
+  &.about {
+    header {
+      background-image: url(../img/header-bg-about.png);
+    }
+  }
 }
 h1,
 h2,
@@ -93,8 +103,10 @@ button {
     background-color: $blue-light;
   }
 }
+
 header {
-  height: 760px;
+  height: 420px;
+
   margin-bottom: 80px;
 
   background-image: url(../img/header-bg-home.png);
@@ -625,8 +637,6 @@ nav {
     }
     a {
       color: #000000;
-      &:hover{
-      }
     }
   }
   .home--contacts__map {
@@ -785,8 +795,8 @@ nav {
       margin-bottom: 20px;
       padding-left: 85px;
 
-      background-color: #d4d0c8;
       color: #000;
+      background-color: #d4d0c8;
 
       font-size: 21px;
       line-height: 3.1;
@@ -826,8 +836,6 @@ nav {
       }
     }
   }
-  .block-about--p__last {
-  }
 }
 
 .block-quote {
@@ -837,7 +845,7 @@ nav {
   text-align: center;
 
   color: #000000;
-  background-image: url(../img/block-quote.jpg);
+  // background-image: url(../img/block-quote.jpg);
   background-repeat: no-repeat;
   background-position: center;
   background-size: cover;
