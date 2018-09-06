@@ -35,6 +35,16 @@ body {
       background-image: url(../img/header-bg-about.png);
     }
   }
+  &.vacancy {
+    header {
+      background-image: url(../img/header-bg-vacancies.png);
+    }
+  }
+  &.contacts {
+    header {
+      background-image: url(../img/header-bg-contacts.png);
+    }
+  }
 }
 h1,
 h2,
@@ -106,7 +116,6 @@ button {
 
 header {
   height: 420px;
-
   margin-bottom: 80px;
 
   background-image: url(../img/header-bg-home.png);
@@ -556,6 +565,9 @@ nav {
     }
   }
 
+  &.vacancies-inner {
+    margin-bottom: 80px;
+  }
 }
 .home--contacts {
   padding-top: 110px;
@@ -837,7 +849,152 @@ nav {
     }
   }
 }
+.block-content {
+  .block-content--title {
+    text-align: center;
 
+    @extend .home--blocktitle;
+  }
+  .block-content--content {
+    h4 {
+      margin-bottom: 14px;
+
+      color: $blue;
+
+      font-size: 28px;
+      line-height: 37px;
+    }
+    p {
+      color: #000000;
+
+      font-size: 16px;
+      line-height: 21px;
+    }
+    ul, ol {
+      margin-bottom: 14px;
+      padding: 0;
+    }
+    li {
+      padding-left: 20px;
+
+      color: #000000;
+      border-bottom: 1px solid #d4d0c8;
+
+      font-size: 16px;
+      line-height: 40px;
+      &:before {
+        display: inline-block;
+
+        margin-right: 5px;
+
+        content: "•";
+
+        color: $blue-light;
+      }
+      &:last-child {
+        border-bottom: 0;
+      }
+    }
+  }
+
+  .block-content--widget {
+    position: relative;
+
+    padding-top: 70px;
+    padding-bottom: 40px;
+
+    background-color: #ffffff;
+    &:before {
+      position: absolute;
+      top: 20px;
+      left: 50%;
+
+      margin-left: -20px;
+
+      @extend .dblock;
+    }
+    &.block-content--widget__it{
+      &:before {
+        @include sprite($sprite-vacancies-item-it);
+      }
+    }
+    &.block-content--widget__fit{
+      &:before {
+        margin-left: -17px;
+
+        @include sprite($sprite-vacancies-item-fit);
+      }
+    }
+    &.block-content--widget__mus{
+      &:before {
+        margin-left: -19px;
+
+        @include sprite($sprite-vacancies-item-mus);
+      }
+    }
+    &.block-content--widget__med{
+      &:before {
+        @include sprite($sprite-vacancies-item-med);
+      }
+    }
+    ul,ol {
+      padding-right: 5px;
+      padding-left: 5px;
+    }
+    li {
+      margin-bottom: 14px;
+      &:before {
+        display: inline-block;
+
+        margin-right: 5px;
+
+        content: "•";
+
+        color: $blue-light;
+      }
+      a {
+        color: #000000;
+      }
+      &:hover {
+        a {
+          text-decoration: underline;
+
+          color: $blue;
+        }
+      }
+    }
+  }
+  .block-content--widget__title {
+    text-align: center;
+
+    color: $blue;
+
+    font-size: 28px;
+    line-height: 37px;
+  }
+  .block-content--widget__allvacancies {
+    position: absolute;
+    bottom: -30px;
+    left: 50%;
+
+    width: 230px;
+    height: 60px;
+    margin-left: -115px;
+
+    text-align: center;
+    text-transform: uppercase;
+
+    color: #ffffff;
+    border-radius: 30px;
+    background-color: $blue;
+
+    font-size: 21px;
+    line-height: 2.8;
+    &:hover{
+      background-color: $blue-light;
+    }
+  }
+}
 .block-quote {
   padding-top: 185px;
   padding-bottom: 140px;
@@ -891,7 +1048,189 @@ nav {
     line-height: 21px;
   }
 }
+.block-postcontact {
+  padding-top: 74px;
 
+  background-image: url(../img/block-postcontact.png);
+  background-repeat: no-repeat;
+  background-position: center;
+  .block-postcontact--left {
+    padding-top: 36px;
+    padding-bottom: 36px;
+
+    text-align: center;
+
+    color: #ffffff;
+
+
+    h6 {
+      margin-bottom: 19px;
+
+      font-size: 28px;
+      font-weight: 200;
+      line-height: 28px;
+    }
+    .home--contacts__mapico,
+    .home--contacts__phone,
+    .home--contacts__email {
+      position: relative;
+
+      padding-top: 42px;
+
+      font-size: 16px;
+      &:before {
+        position: absolute;
+        top: 0;
+        left: 50%;
+
+        margin-left: -15px;
+
+        @extend .dblock;
+      }
+    }
+    .home--contacts__mapico,
+    .home--contacts__phone {
+      margin-bottom: 20px;
+      padding-bottom: 20px;
+      &:after {
+        position: absolute;
+        bottom: 0;
+        left: 50%;
+
+        width: 170px;
+        height: 1px;
+        margin-left: -85px;
+
+        background-color: $blue-light;
+
+        @extend .dblock;
+      }
+    }
+    .home--contacts__mapico {
+      &:before {
+        margin-left: -13px;
+
+        @include sprite($sprite-home-contacts-mapico);
+      }
+    }
+    .home--contacts__phone {
+      &:before {
+        @include sprite($sprite-home-contacts-phone);
+      }
+      a {
+        color: #fff;
+        &:hover{
+          color: $blue;
+        }
+      }
+    }
+    .home--contacts__email {
+      &:before {
+        @include sprite($sprite-home-contacts-email);
+      }
+      a {
+        color: #fff;
+      }
+    }
+  }
+  .block-postcontact--right {
+    padding-top: 34px;
+    h6 {
+      width: 80%;
+      min-width: 300px;
+
+      text-align: center;
+
+      color: #000000;
+
+      font-size: 28px;
+      font-weight: 200;
+      line-height: 28px;
+    }
+    form {
+      display: flex;
+      align-content: flex-start;
+      flex-direction: row;
+      flex-wrap: wrap;
+      justify-content: space-between;
+
+      width: 80%;
+      min-width: 300px;
+    }
+    .block-postcontact--right__phone,
+    .block-postcontact--right__email {
+      position: relative;
+
+      display: inline-block;
+
+      width: 50%;
+      margin-bottom: 10px;
+      &:before{
+        position: absolute;
+        z-index: 2;
+        top: 50%;
+        left: 22px;
+
+        margin-top: -15px;
+
+        @extend .dblock;
+      }
+    }
+    .block-postcontact--right__phone{
+      padding-right: 10px;
+      &:before {
+        @include sprite($sprite-block-postcontact-right-phone);
+      }
+    }
+    .block-postcontact--right__email {
+      padding-left: 10px;
+      &:before {
+        @include sprite($sprite-block-postcontact-right-email);
+      }
+    }
+    input {
+      &[type=text] {
+        height: 50px;
+        margin: 0;
+        padding-left: 52px;
+
+        color: #6b7b83;
+        border-radius: 25px;
+        background-color: #ffffff;
+        box-shadow: 0 0 50px rgba(0, 0, 0, 0.15);
+
+        font-size: 16px;
+      }
+      &[type=submit] {
+        width: 200px;
+        height: 60px;
+        margin: 0 auto;
+
+        text-transform: uppercase;
+
+        color: #ffffff;
+        border-radius: 30px;
+        background-color: $blue-light;
+        text-shadow: 0 2px 2px rgba(0, 0, 0, 0.1);
+
+        font-size: 16px;
+      }
+    }
+    textarea {
+      width: 100%;
+      height: 140px;
+      margin-bottom: 20px;
+      padding: 20px 24px;
+
+      color: #6b7b83;
+      border-radius: 16px;
+      background-color: #fff;
+      box-shadow: 0 0 50px rgba(0, 0, 0, 0.15);
+
+      font-size: 14px;
+    }
+  }
+}
 .block-sharelink {
   padding-top: 100px;
   .block-sharelink--title {

@@ -1,6 +1,6 @@
 {
-  "domain": "wp-framework.dev",
-  "theme": "wp-framework",
+  "domain": "wp-instaff.local",
+  "theme": "wp-instaff",
   "path": {
     "base": {
       "src":"assets/",
