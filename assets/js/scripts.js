@@ -47,3 +47,10 @@ if (typeof jQuery === "undefined") {
   console.log("jQuery " + jQuery.fn.jquery + " has loaded")
 }
 // Place any jQuery/helper plugins in here.
+
+$(document).ready(function(){
+  $(function() {
+    console.log('lil')
+      $('.lazy').Lazy();
+  });
+})

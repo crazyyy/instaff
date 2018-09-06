@@ -1,8 +1,10 @@
 // Font Sizes
 $base-font-size: 16px;
 $em-base: $base-font-size;
-$base-font-family: 'Roboto Condensed', sans-serif;
-$heading-font-family: $base-font-family;
+$font-base: 'Roboto', sans-serif;
+$font-pfdin: 'PF Din Text Cond Pro', sans-serif;
+$font-headline: 'Headline', sans-serif;
+$heading-font-family: $font-base;
 
 // font weight
 $fubold: 900; // Extra Black, Fat, Poster or Ultra Black
@@ -20,8 +22,8 @@ $base-line-height: 1.1;
 $heading-line-height: 1.2;
 
 // Other Sizes
-$width: 980px;
-$footer: 50px;
+$width: 1170px;
+$footer: 240px;
 $footer_margin: $footer - 2 * $footer;
 $base-border-radius: 3px;
 $base-spacing: $base-line-height * 1em;
@@ -31,8 +33,10 @@ $base-z-index: 0;
 // Colors
 $orange: orange;
 $red: red;
-$blue: #477dca;
-$gray-medium: #999;
+$blue: #008daa;
+$blue-light: #06bac5;
+$blue-dark: #005667;
+$gray-medium: rgb(19, 19, 19);
 $gray-dark: #333;
 $gray-light: #ddd;
 
@@ -45,7 +49,7 @@ $base-border-color: $gray-light;
 $base-border: 1px solid $base-border-color;
 
 // Background Colors
-$base-background-color: #fff;
+$base-background-color: #eeeeed;
 $secondary-background-color: tint($base-border-color, 75%);
 
 // Box Shadows
