@@ -47,6 +47,16 @@ if (typeof jQuery === "undefined") {
   console.log("jQuery " + jQuery.fn.jquery + " has loaded")
 }
 // Place any jQuery/helper plugins in here.
+(function() {
+  const $elements = $('.block-about--samesize');
+  let maxheight = 0;
+  $elements.each(function() {
+    if ($(this).height() > maxheight) {
+      maxheight = $(this).height();
+    }
+  });
+  $elements.height(maxheight);
+}());
 
 $(document).ready(function(){
   $(function() {

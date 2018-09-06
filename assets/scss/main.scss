@@ -710,7 +710,226 @@ nav {
     }
   }
 }
+.block-about {
+  padding-top: 50px;
+  padding-bottom: 10px;
+	p {
+    margin-bottom: 28px;
 
+    font-size: 16px;
+    line-height: 21px;
+	}
+  .block-about--title {
+    margin-bottom: 24px;
+
+    text-align: center;
+
+    color: $blue;
+
+    font-size: 28px;
+    line-height: 37px;
+    span {
+      display: block;
+    }
+  }
+  .block-about--subtitle {
+    width: 100%;
+
+    @extend .home--blocktitle;
+  }
+  .block-about--halfimage {
+    margin-bottom: 30px;
+		&.block-about--halfimage__left{
+      display: flex;
+      align-content: center;
+      align-items: flex-end;
+      flex-direction: column;
+      flex-wrap: wrap;
+      justify-content: flex-start;
+
+      width: 40%;
+    }
+    &.block-about--halfimage__right{
+      width: 60%;
+
+      background-image: url(../img/block-about--halfimage__right.png);
+      background-repeat: no-repeat;
+      background-size: cover;
+    }
+    h4 {
+      width: 400px;
+      margin-bottom: 30px;
+
+      color: $blue;
+
+      font-size: 28px;
+      line-height: 37px;
+    }
+    p {
+      width: 400px;
+      margin-bottom: 30px;
+    }
+  }
+  .block-about--list {
+    width: 400px;
+    li {
+      position: relative;
+
+      display: flex;
+      align-content: center;
+      flex-direction: row;
+      flex-wrap: wrap;
+      justify-content: flex-start;
+
+      height: 70px;
+      margin-bottom: 20px;
+      padding-left: 85px;
+
+      background-color: #d4d0c8;
+      color: #000;
+
+      font-size: 21px;
+      line-height: 3.1;
+      &:last-child{
+        margin-bottom: 0;
+      }
+      &:before,
+      &:after {
+        position: absolute;
+        top: 0;
+        bottom: 0;
+
+        @extend .dblock;
+      }
+      &:before {
+        left: 0;
+      }
+      &:after {
+        right: 0;
+
+        @include triangle(25px 70px, $base-background-color, down-right);
+      }
+    }
+    .block-about--list_ico-1 {
+      &:before {
+        @include sprite($sprite-block-about-list-ico-1);
+      }
+    }
+    .block-about--list_ico-2 {
+      &:before {
+        @include sprite($sprite-block-about-list-ico-2);
+      }
+    }
+    .block-about--list_ico-3 {
+      &:before {
+        @include sprite($sprite-block-about-list-ico-3);
+      }
+    }
+  }
+  .block-about--p__last {
+  }
+}
+
+.block-quote {
+  padding-top: 185px;
+  padding-bottom: 140px;
+
+  text-align: center;
+
+  color: #000000;
+  background-image: url(../img/block-quote.jpg);
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+  .block-quote--title {
+    font-size: 50px;
+    line-height: 67px;
+    span {
+      display: block;
+    }
+  }
+  .block-quote--content {
+    position: relative;
+
+    margin-bottom: 18px;
+    padding-bottom: 25px;
+
+    font-size: 21px;
+    line-height: 28px;
+    &:after {
+      position: absolute;
+      bottom: 0;
+      left: 50%;
+
+      width: 170px;
+      height: 1px;
+      margin-left: -85px;
+
+      background-color: $blue;
+
+      @extend .dblock;
+    }
+  }
+  .block-quote--name {
+    margin-bottom: 10px;
+
+    color: $blue;
+
+    line-height: 28px;
+  }
+  .block-quote--post {
+    font-size: 16px;
+    font-style: italic;
+    line-height: 21px;
+  }
+}
+
+.block-sharelink {
+  padding-top: 100px;
+  .block-sharelink--title {
+    @extend .home--blocktitle;
+  }
+	.block-sharelink--container {
+    display: flex;
+    align-content: center;
+    align-items: flex-start;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: center;
+
+    margin-bottom: 80px;
+  }
+	.block-sharelink--ico {
+    display: inline-block;
+	  &:hover{
+      opacity: 0.9;
+	  }
+	  &.block-sharelink--ico__1{
+      @include sprite($sprite-block-sharelink-ico-1);
+    }
+    &.block-sharelink--ico__2{
+      @include sprite($sprite-block-sharelink-ico-2);
+    }
+    &.block-sharelink--ico__3{
+      @include sprite($sprite-block-sharelink-ico-3);
+    }
+    &.block-sharelink--ico__4{
+      @include sprite($sprite-block-sharelink-ico-4);
+    }
+    &.block-sharelink--ico__5{
+      @include sprite($sprite-block-sharelink-ico-5);
+    }
+    &.block-sharelink--ico__6{
+      @include sprite($sprite-block-sharelink-ico-6);
+    }
+    &.block-sharelink--ico__7{
+      @include sprite($sprite-block-sharelink-ico-7);
+    }
+    &.block-sharelink--ico__8{
+      @include sprite($sprite-block-sharelink-ico-8);
+	  }
+	}
+}
 section {
   padding: 0 0 $footer;
 }
@@ -720,8 +939,6 @@ article {
 .looper {
   @extend .clearfix;
 }
-
-
 footer {
   height: $footer;
   margin: $footer_margin auto 0;
