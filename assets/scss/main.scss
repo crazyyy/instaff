@@ -25,24 +25,48 @@ body {
   line-height: $base-line-height;
 
   -webkit-font-smoothing: antialiased;
-  &.home {
+  &.page-template-front-page {
     header {
       height: 760px;
+
+      background-image: url(../img/header-bg-home.png);
     }
   }
-  &.about {
+  &.page-template-page-about {
     header {
       background-image: url(../img/header-bg-about.png);
     }
   }
-  &.vacancy {
+  &.tax-categories,
+  &.single-vacancies {
     header {
       background-image: url(../img/header-bg-vacancies.png);
     }
   }
-  &.contacts {
+  &.page-template-page-contacts {
+    background-image: url(../img/contacts-page-bg.png);
+    background-repeat: no-repeat;
+    background-position: center 450px;
     header {
       background-image: url(../img/header-bg-contacts.png);
+    }
+    .block-content--title {
+      margin-bottom: 0;
+    }
+    .block-postcontact {
+      margin-bottom: 30px;
+      padding-top: 30px;
+
+      background-image: none;
+      .block-postcontact--left {
+        color: #000;
+        a {
+          color: #000;
+        }
+        h6 {
+          display: none;
+        }
+      }
     }
   }
 }
@@ -108,7 +132,6 @@ picture {
   max-width: $width;
 }
 button {
-
   &:hover {
     background-color: $blue-light;
   }
@@ -118,7 +141,7 @@ header {
   height: 420px;
   margin-bottom: 80px;
 
-  background-image: url(../img/header-bg-home.png);
+  background-image: url(../img/header-bg-about.png);
   background-repeat: no-repeat;
   background-position: center;
 }
@@ -154,7 +177,7 @@ header {
         color: $blue-light;
       }
     }
-    &.current {
+    &.current-menu-item {
       a {
         color: $blue-light;
       }
@@ -545,7 +568,7 @@ nav {
     position: relative;
 
     height: 30px;
-    button {
+    a {
       position: absolute;
       bottom: -30px;
       left: 50%;
@@ -559,9 +582,13 @@ nav {
 
       color: #ffffff;
       border-radius: 30px;
+      background-color: $blue;
 
       font-size: 21px;
-      line-height: 30px;
+      line-height: 2.8;
+      &:hover {
+        background-color: $blue-light;
+      }
     }
   }
 
@@ -850,11 +877,7 @@ nav {
   }
 }
 .block-content {
-  .block-content--title {
-    text-align: center;
 
-    @extend .home--blocktitle;
-  }
   .block-content--content {
     h4 {
       margin-bottom: 14px;
@@ -994,6 +1017,11 @@ nav {
       background-color: $blue-light;
     }
   }
+}
+.block-content--title {
+  text-align: center;
+
+  @extend .home--blocktitle;
 }
 .block-quote {
   padding-top: 185px;
@@ -1214,6 +1242,9 @@ nav {
         text-shadow: 0 2px 2px rgba(0, 0, 0, 0.1);
 
         font-size: 16px;
+        &:hover {
+          background-color: $blue;
+        }
       }
     }
     textarea {
@@ -1284,7 +1315,26 @@ article {
   @extend .clearfix;
 }
 .looper {
+  margin-bottom: 20px;
+  padding-top: 15px;
+  padding-bottom: 15px;
+
+  border: 5px solid $base-background-color;
+
   @extend .clearfix;
+  .inner-title {
+    font-size: 24px;
+    margin-bottom: 20px;
+    text-align: center;
+  }
+  p {
+    line-height: 1.4;
+  }
+  .date {
+    display: block;
+    text-align: right;
+    font-size: 70%;
+  }
 }
 footer {
   height: $footer;

@@ -760,7 +760,7 @@ th {
 }
 
 /* display block, simple used for ::after, ::before, sprites */
-.dblock, .header--qoute blockquote:after, .home--blocktitle:after, .home--about .home--about__title:after, .vacancies .vacancies--title:after, .home--contacts .home--contacts__content h6:after, .home--contacts .home--contacts__form h6:after, .block-about .block-about--subtitle:after, .block-content .block-content--title:after, .block-sharelink .block-sharelink--title:after, .home--why .home--why__item:before, .home--why .home--why__ico:before, .home--why .home--why__ico:after, .vacancies .vacancies--item:before, .home--contacts .home--contacts__mapico:before,
+.dblock, .header--qoute blockquote:after, .home--blocktitle:after, .home--about .home--about__title:after, .vacancies .vacancies--title:after, .home--contacts .home--contacts__content h6:after, .home--contacts .home--contacts__form h6:after, .block-about .block-about--subtitle:after, .block-content--title:after, .block-sharelink .block-sharelink--title:after, .home--why .home--why__item:before, .home--why .home--why__ico:before, .home--why .home--why__ico:after, .vacancies .vacancies--item:before, .home--contacts .home--contacts__mapico:before,
 .home--contacts .home--contacts__phone:before,
 .home--contacts .home--contacts__email:before, .home--contacts .home--contacts__mapico:after,
 .home--contacts .home--contacts__phone:after, .home--contacts .home--contacts__form form:before, .block-about .block-about--list li:before, .block-about .block-about--list li:after, .block-content .block-content--widget:before, .block-quote .block-quote--content:after, .block-postcontact .block-postcontact--left .home--contacts__mapico:before,
@@ -2499,20 +2499,49 @@ body {
   -webkit-font-smoothing: antialiased;
 }
 
-body.home header {
+body.page-template-front-page header {
   height: 760px;
+  background-image: url(../img/header-bg-home.png);
 }
 
-body.about header {
+body.page-template-page-about header {
   background-image: url(../img/header-bg-about.png);
 }
 
-body.vacancy header {
+body.tax-categories header, body.single-vacancies header {
   background-image: url(../img/header-bg-vacancies.png);
 }
 
-body.contacts header {
+body.page-template-page-contacts {
+  background-image: url(../img/contacts-page-bg.png);
+  background-repeat: no-repeat;
+  background-position: center 450px;
+}
+
+body.page-template-page-contacts header {
   background-image: url(../img/header-bg-contacts.png);
+}
+
+body.page-template-page-contacts .block-content--title {
+  margin-bottom: 0;
+}
+
+body.page-template-page-contacts .block-postcontact {
+  margin-bottom: 30px;
+  padding-top: 30px;
+  background-image: none;
+}
+
+body.page-template-page-contacts .block-postcontact .block-postcontact--left {
+  color: #000;
+}
+
+body.page-template-page-contacts .block-postcontact .block-postcontact--left a {
+  color: #000;
+}
+
+body.page-template-page-contacts .block-postcontact .block-postcontact--left h6 {
+  display: none;
 }
 
 h1,
@@ -2582,7 +2611,7 @@ button:hover {
 header {
   height: 420px;
   margin-bottom: 80px;
-  background-image: url(../img/header-bg-home.png);
+  background-image: url(../img/header-bg-about.png);
   background-repeat: no-repeat;
   background-position: center;
 }
@@ -2620,7 +2649,7 @@ header {
   color: #06bac5;
 }
 
-.header--nav li.current a {
+.header--nav li.current-menu-item a {
   color: #06bac5;
 }
 
@@ -2770,7 +2799,7 @@ nav ul li {
   display: inline-block;
 }
 
-.home--blocktitle, .home--about .home--about__title, .vacancies .vacancies--title, .home--contacts .home--contacts__content h6, .home--contacts .home--contacts__form h6, .block-about .block-about--subtitle, .block-content .block-content--title, .block-sharelink .block-sharelink--title {
+.home--blocktitle, .home--about .home--about__title, .vacancies .vacancies--title, .home--contacts .home--contacts__content h6, .home--contacts .home--contacts__form h6, .block-about .block-about--subtitle, .block-content--title, .block-sharelink .block-sharelink--title {
   position: relative;
   margin-bottom: 25px;
   padding-bottom: 20px;
@@ -2781,7 +2810,7 @@ nav ul li {
   line-height: 28px;
 }
 
-.home--blocktitle:after, .home--about .home--about__title:after, .vacancies .vacancies--title:after, .home--contacts .home--contacts__content h6:after, .home--contacts .home--contacts__form h6:after, .block-about .block-about--subtitle:after, .block-content .block-content--title:after, .block-sharelink .block-sharelink--title:after {
+.home--blocktitle:after, .home--about .home--about__title:after, .vacancies .vacancies--title:after, .home--contacts .home--contacts__content h6:after, .home--contacts .home--contacts__form h6:after, .block-about .block-about--subtitle:after, .block-content--title:after, .block-sharelink .block-sharelink--title:after {
   position: absolute;
   bottom: 0;
   left: 50%;
@@ -2982,7 +3011,7 @@ nav ul li {
   height: 30px;
 }
 
-.vacancies .vacancies--showall button {
+.vacancies .vacancies--showall a {
   position: absolute;
   bottom: -30px;
   left: 50%;
@@ -2993,8 +3022,13 @@ nav ul li {
   text-transform: uppercase;
   color: #ffffff;
   border-radius: 30px;
+  background-color: #008daa;
   font-size: 21px;
-  line-height: 30px;
+  line-height: 2.8;
+}
+
+.vacancies .vacancies--showall a:hover {
+  background-color: #06bac5;
 }
 
 .vacancies.vacancies-inner {
@@ -3287,10 +3321,6 @@ nav ul li {
   height: 70px;
 }
 
-.block-content .block-content--title {
-  text-align: center;
-}
-
 .block-content .block-content--content h4 {
   margin-bottom: 14px;
   color: #008daa;
@@ -3422,6 +3452,10 @@ nav ul li {
 
 .block-content .block-content--widget__allvacancies:hover {
   background-color: #06bac5;
+}
+
+.block-content--title {
+  text-align: center;
 }
 
 .block-quote {
@@ -3648,6 +3682,10 @@ nav ul li {
   font-size: 16px;
 }
 
+.block-postcontact .block-postcontact--right input[type=submit]:hover {
+  background-color: #008daa;
+}
+
 .block-postcontact .block-postcontact--right textarea {
   width: 100%;
   height: 140px;
@@ -3740,6 +3778,29 @@ nav ul li {
 
 section {
   padding: 0 0 240px;
+}
+
+.looper {
+  margin-bottom: 20px;
+  padding-top: 15px;
+  padding-bottom: 15px;
+  border: 5px solid #eeeeed;
+}
+
+.looper .inner-title {
+  font-size: 24px;
+  margin-bottom: 20px;
+  text-align: center;
+}
+
+.looper p {
+  line-height: 1.4;
+}
+
+.looper .date {
+  display: block;
+  text-align: right;
+  font-size: 70%;
 }
 
 footer {
