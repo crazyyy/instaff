@@ -40,7 +40,7 @@
       <div class="container">
         <div class="row">
 
-          <div class="header--logo col-xl-3">
+          <div class="header--logo col-xl-3 order-xl-1 col-lg-3 order-lg-1 col-md-3 order-md-1 col-sm-3 order-sm-1 col-xs-3 order-xs-1">
             <?php if ( !is_front_page() && !is_home() ){ ?>
               <a href="<?php echo home_url(); ?>">
                 <?php } ?>
@@ -50,11 +50,11 @@
             <?php } ?>
           </div><!-- /header--logo -->
 
-          <nav class="header--nav col-xl-6" role="navigation">
+          <nav class="header--nav col-xl-6 order-xl-2 col-lg-12 order-lg-3 col-md-12 order-md-3 col-sm-12 order-sm-3 col-xs-12 order-xs-3" role="navigation">
             <?php wpeHeadNav(); ?>
           </nav><!-- /header--nav -->
 
-          <div class="header--contacts col-xl-3">
+          <div class="header--contacts col-xl-3 order-xl-3 col-lg-9 order-lg-2 col-md-9 order-md-2 col-sm-9 order-sm-2 col-xs-9 order-xs-2">
             <a href="tel:+380502010002" class="header--phone">+38 <span>050</span> 201 00 02</a>
             <a href="tel:+380502010003" class="header--phone">+38 <span>067</span> 101 00 03</a>
             <span class="header--workingtime">24/7 — 365 круглосуточно</span>
@@ -62,32 +62,10 @@
           <!-- /.header--contacts col-xl-4 -->
 
           <?php if ( is_page(37) ){ ?>
-            <div class="header--search col-xl-10 offset-xl-1">
+            <div class="header--search col-xl-10 order-xl-4 offset-xl-1 order-lg-4 col-md-12 offset-md-0 order-md-4 order-sm-4 order-xs-4">
               <h6 class="header--search__title">Быстрый и Качественный поиск</h6>
               <p class="header--search__descr">по всей территории Украины и за её приделами</p>
               <form class="header--search__form" method="get" action="<?php echo home_url(); ?>" role="search">
-                <select name="" id="">
-                  <option value="all">Все категории</option>
-                  <?php $wcatTerms = get_terms('categories', array('hide_empty' => 1, 'parent' =>0));
-                    foreach($wcatTerms as $wcatTerm) :
-                  ?>
-                    <option value="<?php echo $wcatTerm->term_id; ?>"><?php echo $wcatTerm->name; ?></option>
-                    <?php
-                      $wsubargs = array(
-                        'hierarchical' => 1,
-                        'show_option_none' => '',
-                        'hide_empty' => 0,
-                        'parent' => $wcatTerm->term_id,
-                        'taxonomy' => 'categories'
-                      );
-                      $wsubcats = get_categories($wsubargs);
-                      foreach ($wsubcats as $wsc):
-                    ?>
-                      <option value="<?php echo $wsc->term_id; ?>" class="header--search__form-subcat"> > <?php echo $wsc->name; ?></option>
-                    <?php endforeach; ?>
-                  <?php endforeach; ?>
-
-                </select>
                 <input type="search" name="s" placeholder="Введите название вакансии">
                 <button>Найти</button>
               </form>
@@ -95,7 +73,7 @@
             <!-- /.header--search -->
           <?php } ?>
 
-          <div class="header--qoute col-xl-6 offset-xl-3">
+          <div class="header--qoute col-xl-6 order-xl-5 offset-xl-3 order-lg-5 col-md-12 order-md-5 offset-md-0 order-sm-5 order-xs-5">
             <blockquote>“Мечта не становится реальностью через магию; <br>это требует пота, решительности и тяжелой работы.”</blockquote>
             <p class="header--qoute__author">Колин Пауэлл</p>
             <div class="header--qoute__post">американский политический деятель и генерал армии США</div>

@@ -1,4 +1,12 @@
 @charset "UTF-8";
+/*
+TODO:
+1. add custom post qoutes and randomly display on header
+2. remov search from header
+3. add to taxonomy custom icons
+4. add share to share icons
+5. mobile design
+*/
 html,
 body,
 div,
@@ -2748,10 +2756,11 @@ header {
 .header--search input {
   z-index: 1;
   right: 30px;
-  left: 240px;
-  width: 60%;
-  padding-left: 40px;
+  left: 0;
+  width: 90%;
+  padding-left: 20px;
   background-color: #fff;
+  border-radius: 30px 0 0 30px;
 }
 
 .header--search button {
@@ -3943,6 +3952,12 @@ footer .footer--contacts__email:before {
   background-position: -190px -170px;
   width: 19px;
   height: 14px;
+}
+
+@media (max-width: 767.98px) {
+  .home--contacts__map {
+    height: 300px;
+  }
 }
 
 @font-face {

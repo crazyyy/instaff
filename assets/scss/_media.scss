@@ -7,10 +7,15 @@
 }
 // col-md-# ( ≥768px)
 @include media-breakpoint-down(md) {
+
 }
 // col-sm-# ( ≥576px)
 @include media-breakpoint-down(sm) {
+  .home--contacts__map {
+    height: 300px;
+  }
 }
 
 @include media-breakpoint-down(xs) {
+
 }

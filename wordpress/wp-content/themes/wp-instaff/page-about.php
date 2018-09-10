@@ -4,7 +4,7 @@
     <div class="home--about">
       <div class="container-fluid">
         <div class="row">
-          <h6 class="home--about__title col-xl-12">О нас</h6>
+          <h1 class="home--about__title col-xl-12">О нас</h1>
           <div class="home--about__image lazy col-xl-8" data-src="<?php echo get_template_directory_uri(); ?>/img/home--about.png"></div>
           <div class="home--about__content col-xl-4">
             <?php the_content(); ?>

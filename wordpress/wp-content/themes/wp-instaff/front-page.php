@@ -4,9 +4,9 @@
     <div class="home--about">
       <div class="container-fluid">
         <div class="row">
-          <h6 class="home--about__title col-xl-12">О нас</h6>
-          <div class="home--about__image lazy col-xl-8" data-src="<?php echo get_template_directory_uri(); ?>/img/home--about.png"></div>
-          <div class="home--about__content col-xl-4">
+          <h1 class="home--about__title col-xl-12">О нас</h1>
+          <div class="home--about__image lazy col-xl-8 d-xl-none" data-src="<?php echo get_template_directory_uri(); ?>/img/home--about.png"></div>
+          <div class="home--about__content col-xl-4 col-lg-12">
             <?php the_content(); ?>
           </div>
           <!-- /.home--about__content col-xl-4 -->
@@ -18,25 +18,25 @@
   <div class="home--why">
     <div class="container">
       <div class="row">
-        <div class="home--why__item col-xl-3">
+        <div class="home--why__item col-xl-3 col-lg-3 col-md-6 col-sm-6 col-sm-12">
           <i class="home--why__ico home--why__ico-1"></i>
           <!-- /.home--why__ico home--why__ico-1 -->
           <p>Крупнейшая аудитория работодателей и соискателей на одной площадке</p>
         </div>
         <!-- /.home--why__item col-xl-3 -->
-        <div class="home--why__item col-xl-3">
+        <div class="home--why__item col-xl-3 col-lg-3 col-md-6 col-sm-6 col-sm-12">
           <i class="home--why__ico home--why__ico-2"></i>
           <!-- /.home--why__ico home--why__ico-2 -->
           <p>Крупнейшая аудитория работодателей и соискателей на одной площадке</p>
         </div>
         <!-- /.home--why__item col-xl-3 -->
-        <div class="home--why__item col-xl-3">
+        <div class="home--why__item col-xl-3 col-lg-3 col-md-6 col-sm-6 col-sm-12">
           <i class="home--why__ico home--why__ico-3"></i>
           <!-- /.home--why__ico home--why__ico-3 -->
           <p>Самый популярный сайт по поиску работы среди украинцев</p>
         </div>
         <!-- /.home--why__item col-xl-3 -->
-        <div class="home--why__item col-xl-3">
+        <div class="home--why__item col-xl-3 col-lg-3 col-md-6 col-sm-6 col-sm-12">
           <i class="home--why__ico home--why__ico-4"></i>
           <!-- /.home--why__ico home--why__ico-4 -->
           <p>Короткий путь для соискателя найти работу, а для компании – идеального сотрудника</p>
@@ -65,7 +65,7 @@
 
           foreach ($terms as $term) {
             ?>
-              <div class="vacancies--item vacancies--item__it vacancies--item__<?php echo $term->slug; ?> col-xl-3">
+              <div class="vacancies--item vacancies--item__it vacancies--item__<?php echo $term->slug; ?> col-xl-3 col-lg-3 col-sm-6">
                 <h4 class="vacancies--subtitle"><?php echo $term->name; ?></h4>
                 <?php
                   $this_args = array(
@@ -99,18 +99,18 @@
   <div class="home--contacts lazy" data-src="<?php echo get_template_directory_uri(); ?>/img/home--contacts.png">
     <div class="container">
       <div class="row">
-        <div class="home--contacts__content col-xl-5">
+        <div class="home--contacts__content col-xl-5 col-lg-6 col-md-6 col-sm-12">
           <h6>Контакты</h6>
           <p class="home--contacts__mapico">1901 W Madison St, Chicago, IL 60612, США</p>
           <p class="home--contacts__phone"><a href="+1 312 455 4500">+1 <span>312</span> 455 4500</a>&nbsp;&nbsp;|&nbsp;&nbsp;<a href="tel:+1 312 455 4500">+1 <span>312</span> 455 4500</a></p>
           <p class="home--contacts__email"><a href="mailto:office@instaff.com">office@instaff.com</a></p>
         </div>
         <!-- /.home--contacts__content col-xl-5 -->
-        <div class="home--contacts__map lazy col-xl-7" data-src="<?php echo get_template_directory_uri(); ?>/img/home--contacts__map.png">
+        <div class="home--contacts__map lazy col-xl-7 col-lg-6 col-md-6 col-sm-12" data-src="<?php echo get_template_directory_uri(); ?>/img/home--contacts__map.png">
         </div>
         <!-- /.home--contacts__map col-xl-7 -->
-        <div class="home--contacts__image lazy col-xl-7" data-src="<?php echo get_template_directory_uri(); ?>/img/home--contacts__image.png"></div>
-        <div class="home--contacts__form col-xl-5">
+        <div class="home--contacts__image lazy col-xl-7 col-lg-6 col-md-6 d-sm-none" data-src="<?php echo get_template_directory_uri(); ?>/img/home--contacts__image.png"></div>
+        <div class="home--contacts__form col-xl-5 col-lg-6 col-md-6 col-sm-12">
           <h6>Оформить заявку</h6>
           <form action="">
             <input type="text" placeholder="Ваш e-mail">

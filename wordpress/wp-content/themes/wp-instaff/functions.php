@@ -721,4 +721,5 @@ function disable_emojicons_tinymce( $plugins ) {
     );
     register_taxonomy( 'categories', array( 'vacancies' ), $args );
 }
+
 ?>
