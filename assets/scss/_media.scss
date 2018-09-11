@@ -1,21 +1,319 @@
+
 // col-xl-# ( ≥1200px)
 @include media-breakpoint-down(xl) {
- }
+  .header--logo {
+    padding-top: 50px;
+
+    text-align: center;
+  }
+  .header--nav {
+    a {
+      font-size: 1.9vw;
+      line-height: 1;
+    }
+  }
+  .header--search {
+    margin-bottom: 3vw;
+    padding-top: 3vw;
+    .header--search__title {
+      margin-bottom: 1vw;
+
+      font-size: 4.2vw;
+    }
+    .header--search__descr {
+      font-size: 3vw;
+      line-height: 1;
+    }
+  }
+  .home--about {
+    .home--about__image {
+      background-size: cover;
+    }
+    .home--about__content {
+      h6, p {
+        width: auto;
+      }
+    }
+  }
+  .block-about {
+    .block-about--halfimage{
+      &.block-about--halfimage__left {
+        width: 70%;
+      }
+      &.block-about--halfimage__right {
+        width: 30%;
+        background-size: cover;
+      }
+      h4, p, ul {
+        width: 100%;
+      }
+    }
+  }
+  section {
+    padding-bottom: 0;
+  }
+  footer {
+    height: auto;
+    margin-top: 0;
+    .footer--contacts {
+      flex-direction: column;
+    }
+    .footer--contacts__adress,
+    .footer--contacts__email,
+    .footer--contacts__phone {
+      justify-content: center;
+
+      width: 100%;
+      margin-bottom: 10px;
+    }
+  }
+}
+@media (min-width: 1500px) {
+  .header--nav a {
+    font-size: 22px;
+  }
+  .header--search .header--search__title {
+    font-size: 3vw;
+  }
+  .header--search .header--search__descr {
+    font-size: 2vw;
+  }
+}
+@media (max-width: 1012px) {
+  .block-about .block-about--halfimage.block-about--halfimage__left {
+    width: 90%;
+    margin: auto;
+  }
+  .block-about .block-about--halfimage.block-about--halfimage__right {
+    display: none;
+  }
+  .block-about .block-about--halfimage ul {
+    margin-bottom: 20px;
+  }
+  .block-about p {
+    width: 90%;
+    margin-left: auto;
+    margin-right: auto;
+  }
+}
 // col-lg-# ( ≥992px)
 @include media-breakpoint-down(lg) {
+  body {
+    &.page-template-front-page {
+      header {
+        height: 640px;
 
+        background-position: center bottom;
+      }
+    }
+  }
+  .block-about .block-about--subtitle,
+  .block-content--title,
+  .block-sharelink .block-sharelink--title,
+  .home--about .home--about__title,
+  .home--blocktitle,
+  .home--contacts .home--contacts__content h6,
+  .home--contacts .home--contacts__form h6,
+  .vacancies .vacancies--title {
+    font-size: 4.5vw;
+    line-height: 1;
+  }
+  .block-about .block-about--halfimage.block-about--halfimage__left {
+    display: block;
+    height: auto !important;
+  }
+  .block-sharelink .block-sharelink--ico {
+    margin-bottom: 20px;
+  }
 }
 // col-md-# ( ≥768px)
 @include media-breakpoint-down(md) {
+  .header--nav {
+    a {
+      font-size: 4vw;
+    }
+  }
+  .home--why {
+    .home--why__item {
+      &:nth-child(1),
+      &:nth-child(2) {
+        margin-bottom: 30px;
+      }
+      &:nth-child(3),
+      &:nth-child(4) {
+        &:before {
+          top: auto;
+          bottom: -30px;
 
+          border-top: 0;
+
+          @include triangle(40px 19px, #fff transparent, up);
+        }
+      }
+    }
+  }
+  .home--contacts {
+    padding-top: 80px;
+    padding-bottom: 40px;
+  }
 }
 // col-sm-# ( ≥576px)
 @include media-breakpoint-down(sm) {
+  header {
+    margin-bottom: 40px;
+  }
+  .header--qoute {
+    display: none;
+  }
+  .header--contacts {
+    text-align: center;
+  }
+
   .home--contacts__map {
     height: 300px;
   }
+
+  .home--why {
+    .home--why__item {
+      margin-bottom: 30px;
+      &:nth-child(1),
+      &:nth-child(2),
+      &:nth-child(3),
+      &:nth-child(4) {
+        &:before {
+          top: 50%;
+          bottom: auto;
+          left: 0;
+
+          margin-top: -10px;
+          margin-left: 0;
+
+          @include triangle(40px 19px, #fff transparent, right);
+        }
+      }
+    }
+  }
+  .home--contacts {
+    .home--contacts__image {
+      display: none;
+
+      opacity: 0;
+    }
+  }
+  .block-about .block-about--subtitle, .block-content--title, .block-sharelink .block-sharelink--title, .home--about .home--about__title, .home--blocktitle, .home--contacts .home--contacts__content h6, .home--contacts .home--contacts__form h6, .vacancies .vacancies--title {
+    font-size: 8.5vw;
+  }
+  .block-postcontact {
+    background-image: none;
+    background-color: $blue-dark;
+    padding-top: 3px;
+    border-bottom: 5px solid #fff;
+  }
+  .block-postcontact .block-postcontact--left {
+    padding-bottom: 10px;
+  }
+  .block-postcontact .block-postcontact--right {
+    padding-bottom: 36px;
+  }
+  .block-postcontact .block-postcontact--right h6 {
+    color: #fff;
+  }
+  .block-postcontact .block-postcontact--right h6,
+  .block-postcontact .block-postcontact--right form {
+    width: 100%;
+  }
+  .home--contacts {
+    .home--contacts__image {
+      display: none !important;
+    }
+  }
+  footer {
+    .footer-nav {
+      li {
+        width: 49%;
+        margin-right: 0;
+        margin-bottom: 18px;
+        margin-left: 0;
+        &:after {
+          display: none;
+        }
+      }
+    }
+  }
+}
+@media (max-width: 480px) {
+  .block-postcontact .block-postcontact--right .block-postcontact--right__email,
+  .block-postcontact .block-postcontact--right .block-postcontact--right__phone {
+    width: 100%;
+    padding-left: 0;
+    padding-right: 0;
+  }
+  .block-postcontact .block-postcontact--right input[type=text] {
+    padding-left: 60px;
+  }
+}
+@include media-breakpoint-down(xs) {
+  .header--logo {
+    padding-top: 20px;
+  }
+  .header--nav {
+    padding-top: 2px;
+    ul {
+      flex-direction: column;
+    }
+    li {
+      width: 100%;
+      margin-bottom: 10px;
+
+      text-align: center;
+    }
+    a {
+      font-size: 6vw;
+    }
+  }
+  .home--about {
+    .home--about__image {
+      display: none !important;
+
+      opacity: 0;
+    }
+  }
+
+  footer {
+    .footer-nav {
+      li {
+        width: 100%;
+      }
+    }
+  }
 }
 
-@include media-breakpoint-down(xs) {
+@media (max-width: 380px) {
+  .vacancies {
+    .vacancies--showall {
+      a {
+        width: 320px;
+        margin-left: -160px;
+      }
+    }
+  }
+  .home--contacts {
+    .home--contacts__phone {
+      font-size: 0;
+      a {
+        display: block;
 
+        width: 100%;
+        margin-bottom: 10px;
+
+        text-decoration: none;
+
+        font-size: 18px;
+      }
+    }
+  }
+  .block-about .block-about--list li {
+    font-size: 16px;
+    line-height: 4;
+  }
 }

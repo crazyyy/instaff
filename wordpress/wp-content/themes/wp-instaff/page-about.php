@@ -18,30 +18,30 @@
   <div class="home--why">
     <div class="container">
       <div class="row">
-        <div class="home--why__item col-xl-3">
+        <div class="home--why__item col-xl-3 col-lg-3 col-md-6 col-sm-6 col-sm-12">
           <i class="home--why__ico home--why__ico-1"></i>
           <!-- /.home--why__ico home--why__ico-1 -->
           <p>Крупнейшая аудитория работодателей и соискателей на одной площадке</p>
         </div>
-        <!-- /.home--why__item col-xl-3 -->
-        <div class="home--why__item col-xl-3">
+        <!-- /.home--why__item col-xl-3 col-lg-3 col-md-6 col-sm-6 col-sm-12 -->
+        <div class="home--why__item col-xl-3 col-lg-3 col-md-6 col-sm-6 col-sm-12">
           <i class="home--why__ico home--why__ico-2"></i>
           <!-- /.home--why__ico home--why__ico-2 -->
           <p>Крупнейшая аудитория работодателей и соискателей на одной площадке</p>
         </div>
-        <!-- /.home--why__item col-xl-3 -->
-        <div class="home--why__item col-xl-3">
+        <!-- /.home--why__item col-xl-3 col-lg-3 col-md-6 col-sm-6 col-sm-12 -->
+        <div class="home--why__item col-xl-3 col-lg-3 col-md-6 col-sm-6 col-sm-12">
           <i class="home--why__ico home--why__ico-3"></i>
           <!-- /.home--why__ico home--why__ico-3 -->
           <p>Самый популярный сайт по поиску работы среди украинцев</p>
         </div>
-        <!-- /.home--why__item col-xl-3 -->
-        <div class="home--why__item col-xl-3">
+        <!-- /.home--why__item col-xl-3 col-lg-3 col-md-6 col-sm-6 col-sm-12 -->
+        <div class="home--why__item col-xl-3 col-lg-3 col-md-6 col-sm-6 col-sm-12">
           <i class="home--why__ico home--why__ico-4"></i>
           <!-- /.home--why__ico home--why__ico-4 -->
           <p>Короткий путь для соискателя найти работу, а для компании – идеального сотрудника</p>
         </div>
-        <!-- /.home--why__item col-xl-3 -->
+        <!-- /.home--why__item col-xl-3 col-lg-3 col-md-6 col-sm-6 col-sm-12 -->
       </div>
       <!-- /.row -->
     </div>

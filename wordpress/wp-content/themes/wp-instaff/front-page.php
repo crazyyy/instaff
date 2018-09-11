@@ -5,8 +5,8 @@
       <div class="container-fluid">
         <div class="row">
           <h1 class="home--about__title col-xl-12">О нас</h1>
-          <div class="home--about__image lazy col-xl-8 d-xl-none" data-src="<?php echo get_template_directory_uri(); ?>/img/home--about.png"></div>
-          <div class="home--about__content col-xl-4 col-lg-12">
+          <div class="home--about__image lazy col-xl-8 col-lg-6 col-md-6 col-sm-4" data-src="<?php echo get_template_directory_uri(); ?>/img/home--about.png"></div>
+          <div class="home--about__content col-xl-4 col-lg-6 col-md-6 col-sm-8">
             <?php the_content(); ?>
           </div>
           <!-- /.home--about__content col-xl-4 -->
@@ -62,10 +62,25 @@
           ];
           $terms = get_terms( $args );
 
-
+          $i = 0;
           foreach ($terms as $term) {
             ?>
-              <div class="vacancies--item vacancies--item__it vacancies--item__<?php echo $term->slug; ?> col-xl-3 col-lg-3 col-sm-6">
+              <?php
+                $image = get_field('image', $term);
+                if( !empty($image) ) {
+                  $bgi = $image['url'];
+                  $style = 'background-image: url('. $bgi .'); background-position: center; background-repeat: no-repeat; width: 40px; height: 40px;';
+                } else {
+                  $bgi = get_template_directory_uri() . '/img/default-vacancies-ico.png';
+                  $style = 'background-image: url('. $bgi .'); background-position: center; background-repeat: no-repeat; width: 40px; height: 40px;';
+                }
+              ?>
+              <style>
+                .vacancies .vacancies--item.vacancies--item__<?php echo $i; ?>::before  {
+                  <?php echo $style; ?>
+                }
+              </style>
+              <div class="vacancies--item vacancies--item__<?php echo $i; ?> col-xl-3 col-lg-3 col-sm-6">
                 <h4 class="vacancies--subtitle"><?php echo $term->name; ?></h4>
                 <?php
                   $this_args = array(
@@ -83,10 +98,11 @@
               </div>
               <!-- /.vacancies--item vacancies--item__name col-xl-3 -->
             <?php
+            $i++;
           }
         ?>
         <div class="vacancies--showall col-xl-12">
-          <a href="#">Все вакансии</a>
+          <a href="/vacancies/">Все вакансии</a>
         </div>
         <!-- /.vacancies--showall col-xl-12 -->
       </div>
@@ -109,7 +125,7 @@
         <div class="home--contacts__map lazy col-xl-7 col-lg-6 col-md-6 col-sm-12" data-src="<?php echo get_template_directory_uri(); ?>/img/home--contacts__map.png">
         </div>
         <!-- /.home--contacts__map col-xl-7 -->
-        <div class="home--contacts__image lazy col-xl-7 col-lg-6 col-md-6 d-sm-none" data-src="<?php echo get_template_directory_uri(); ?>/img/home--contacts__image.png"></div>
+        <div class="home--contacts__image lazy col-xl-7 col-lg-6 col-md-6" data-src="<?php echo get_template_directory_uri(); ?>/img/home--contacts__image.png"></div>
         <div class="home--contacts__form col-xl-5 col-lg-6 col-md-6 col-sm-12">
           <h6>Оформить заявку</h6>
           <form action="">

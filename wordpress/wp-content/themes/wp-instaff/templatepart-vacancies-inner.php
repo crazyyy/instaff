@@ -14,11 +14,27 @@
 
         shuffle($terms);
         $i = 0;
+        $n = 0;
 
         foreach ($terms as $term) {
           if ($i < 4) {
             ?>
-              <div class="vacancies--item vacancies--item__it vacancies--item__<?php echo $term->slug; ?> col-xl-3">
+              <?php
+                $image = get_field('image', $term);
+                if( !empty($image) ) {
+                  $bgi = $image['url'];
+                  $style = 'background-image: url('. $bgi .'); background-position: center; background-repeat: no-repeat; width: 40px; height: 40px;';
+                } else {
+                  $bgi = get_template_directory_uri() . '/img/default-vacancies-ico.png';
+                  $style = 'background-image: url('. $bgi .'); background-position: center; background-repeat: no-repeat; width: 40px; height: 40px;';
+                }
+              ?>
+              <style>
+                .vacancies .vacancies--item.vacancies--item__<?php echo $n; ?>::before  {
+                  <?php echo $style; ?>
+                }
+              </style>
+              <div class="vacancies--item vacancies--item__<?php echo $n; ?> vacancies--item__<?php echo $term->slug; ?> col-xl-3 col-lg-3 col-md-6 col-sm-6">
                 <h4 class="vacancies--subtitle"><?php echo $term->name; ?></h4>
                 <?php
                   $this_args = array(
@@ -37,6 +53,7 @@
               <!-- /.vacancies--item vacancies--item__name col-xl-3 -->
             <?php
             $i++;
+            $n++;
           }
         }
       ?>

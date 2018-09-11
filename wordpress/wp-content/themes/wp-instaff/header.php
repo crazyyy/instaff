@@ -22,7 +22,7 @@
   <meta name="theme-color" content="#ffffff">
 
   <!-- css + javascript -->
-  <link rel="stylesheet" href="//fonts.googleapis.com/css?family=Roboto:100,100i,300,300i&amp;subset=cyrillic">
+  <link href="//fonts.googleapis.com/css?family=Roboto:100,100i,300,300i&amp;subset=cyrillic" rel="stylesheet" lazyload>
 
   <!--[if lt IE 9]>
     <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/html5shiv/3.7.3/html5shiv.min.js"></script>

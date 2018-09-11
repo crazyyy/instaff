@@ -5,6 +5,12 @@
       <?php if (have_posts()): while (have_posts()) : the_post(); ?>
         <div class="row align-items-start">
           <h1 class="block-content--title col-xl-12"><?php the_title(); ?></h1>
+          <div class="block-content--searcher col-xl-8 offset-xl-2">
+            <form class="block-content--searcher__form" method="get" action="<?php echo home_url(); ?>" role="search">
+              <input type="search" name="s" placeholder="Введите название вакансии">
+              <button>Найти</button>
+            </form>
+          </div><!-- /.block-content--searcher col-xl-8 offset-xl-2 -->
           <div class="block-content--content col-xl-12">
             <?php the_content(); ?>
             <?php edit_post_link(); ?>

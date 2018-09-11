@@ -59,7 +59,7 @@ if (typeof jQuery === "undefined") {
 
 $(document).ready(function(){
   $(function() {
-    console.log('lil')
-      $('.lazy').Lazy();
+    $('.lazy').Lazy();
+    // $('body.page-template-front-page header').css('background-image', 'url(/wp-content/themes/wp-instaff/img/header-bg-home.png)');
   });
 })
